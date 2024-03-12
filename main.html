@@ -37,16 +37,20 @@
             text-decoration: none;
         }
         section {
-            margin-left: 10px;
+            margin: 30px;
+            margin-top: 0.1px;
+            margin-bottom: 0.1px;
             padding: 1px;
             color: #fff;
         }
         footer {
+            overflow-x: hidden;
             background-color: #333;
             color: #fff;
-            padding: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
             text-align: center;
-            position: fixed;
+            position: bottom;
             bottom: 0;
             width: 100%;
         }
@@ -58,17 +62,17 @@
     </header>
     <nav>
         <ul>
-            <li><a href="#principal">Página Principal</a></li>
-            <li><a href="#sistemas">Sistemas Operacionais</a></li>
-            <li><a href="#arquitetura">Arquitetura e Organização de Computadores</a></li>
-            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#título principal">Página Principal</a></li>
+            <li><a href="#título sistemas">Sistemas Operacionais</a></li>
+            <li><a href="#título arquitetura">Arquitetura e Organização de Computadores</a></li>
+            <li><a href="#título sobre">Sobre</a></li>
         </ul>
     </nav>
-    <section>
+    <section id="título principal">
         <h2 onclick="toggleSection('principal')">Página Principal</h2>
         <p id="principal">Bem-vindo à WikiMac, a enciclopédia online sobre o assunto do CESMAC de ADS.</p>
     </section>
-    <section>
+    <section id="título sistemas">
         <h2 onclick="toggleSection('sistemas')">Sistemas Operacionais</h2>
         <p id="sistemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur mauris ut nibh mollis, id imperdiet elit tempor. Nulla vel orci lectus. Fusce sed suscipit ex. Praesent eget vestibulum nisl. Nulla imperdiet urna ac interdum faucibus. Donec fringilla placerat ligula, vel suscipit orci dapibus id. Ut ornare molestie elit, at gravida sapien egestas id. Phasellus commodo sem in enim dapibus, a interdum justo pellentesque. Ut eget posuere nisi. Donec sed est placerat, hendrerit erat eu, malesuada lectus. Sed tempor metus et efficitur aliquet. Morbi non consectetur mauris. Phasellus nec metus urna.<br>
             Phasellus sodales porttitor urna vel efficitur. Praesent tincidunt, odio vel sagittis hendrerit, tellus diam finibus leo, aliquet venenatis enim sem hendrerit mauris. Fusce eget imperdiet elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris tristique lacinia tristique. Nunc in maximus elit. Pellentesque blandit volutpat purus, nec sollicitudin lorem vestibulum quis. Nullam sed varius nunc. Aenean iaculis odio nec ultrices vehicula. In luctus augue a felis ultrices dictum. Duis feugiat augue quis neque ultricies, sit amet pellentesque arcu aliquet. Sed mattis orci sed ex tempus sodales. Proin sit amet odio eros.<br>
@@ -76,7 +80,7 @@
             Vivamus scelerisque rhoncus magna, sit amet pretium enim facilisis venenatis. Curabitur eleifend, urna ut ullamcorper elementum, nisl velit placerat nisl, eu viverra ligula erat ut lectus. Cras a feugiat felis. Nullam sollicitudin, magna accumsan iaculis venenatis, nisi tellus vulputate ligula, et pretium leo enim eu ex. Aenean posuere odio non odio posuere, eget consectetur massa malesuada. Fusce lacus metus, malesuada et libero vel, sagittis laoreet risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas convallis sapien ut tempor tempus.<br>
             Vivamus id dui in augue venenatis semper. Phasellus vulputate condimentum mauris vitae iaculis. Nam id hendrerit lectus. Duis in euismod nisl, sit amet porta risus. Duis vitae felis mauris. Quisque congue leo nec orci semper fringilla. Ut rutrum non felis eu tempor. Aenean eget ullamcorper elit. Donec id feugiat purus. Aliquam in lectus efficitur, posuere est sed, vulputate dui. Quisque egestas magna vel elit pretium venenatis.</p>
     </section>
-    <section>
+    <section id="título arquitetura">
         <h2 onclick="toggleSection('arquitetura')">Arquitetura e Organização de Computadores</h2>
         <p id="arquitetura">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur mauris ut nibh mollis, id imperdiet elit tempor. Nulla vel orci lectus. Fusce sed suscipit ex. Praesent eget vestibulum nisl. Nulla imperdiet urna ac interdum faucibus. Donec fringilla placerat ligula, vel suscipit orci dapibus id. Ut ornare molestie elit, at gravida sapien egestas id. Phasellus commodo sem in enim dapibus, a interdum justo pellentesque. Ut eget posuere nisi. Donec sed est placerat, hendrerit erat eu, malesuada lectus. Sed tempor metus et efficitur aliquet. Morbi non consectetur mauris. Phasellus nec metus urna.<br>
             Phasellus sodales porttitor urna vel efficitur. Praesent tincidunt, odio vel sagittis hendrerit, tellus diam finibus leo, aliquet venenatis enim sem hendrerit mauris. Fusce eget imperdiet elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris tristique lacinia tristique. Nunc in maximus elit. Pellentesque blandit volutpat purus, nec sollicitudin lorem vestibulum quis. Nullam sed varius nunc. Aenean iaculis odio nec ultrices vehicula. In luctus augue a felis ultrices dictum. Duis feugiat augue quis neque ultricies, sit amet pellentesque arcu aliquet. Sed mattis orci sed ex tempus sodales. Proin sit amet odio eros.<br>
@@ -84,7 +88,7 @@
             Vivamus scelerisque rhoncus magna, sit amet pretium enim facilisis venenatis. Curabitur eleifend, urna ut ullamcorper elementum, nisl velit placerat nisl, eu viverra ligula erat ut lectus. Cras a feugiat felis. Nullam sollicitudin, magna accumsan iaculis venenatis, nisi tellus vulputate ligula, et pretium leo enim eu ex. Aenean posuere odio non odio posuere, eget consectetur massa malesuada. Fusce lacus metus, malesuada et libero vel, sagittis laoreet risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas convallis sapien ut tempor tempus.<br>
             Vivamus id dui in augue venenatis semper. Phasellus vulputate condimentum mauris vitae iaculis. Nam id hendrerit lectus. Duis in euismod nisl, sit amet porta risus. Duis vitae felis mauris. Quisque congue leo nec orci semper fringilla. Ut rutrum non felis eu tempor. Aenean eget ullamcorper elit. Donec id feugiat purus. Aliquam in lectus efficitur, posuere est sed, vulputate dui. Quisque egestas magna vel elit pretium venenatis.</p>
     </section>
-    <section>
+    <section id="título sobre">
         <h2 onclick="toggleSection('sobre')">Sobre</h2>
         <p id="sobre">Este trabalho foi feito por Vinícius Stanley, Lucas Melo, Hygo, Layla Paes e Paulo</p>
     </section>
