@@ -4,77 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WikiMac</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #4f4f4f;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-        nav {
-            background-color: #666;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-        section {
-            margin: 30px;
-            margin-top: 0.1px;
-            margin-bottom: 0.1px;
-            padding: 1px;
-            color: #fff;
-        }
-        footer {
-            overflow-x: hidden;
-            background-color: #333;
-            color: #fff;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            text-align: center;
-            margin-bottom: 0;
-            width: 100%;
-        }
-        .flex{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-            border-radius: 5px;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-        }
 
-      
-        .seta-virada {
-            transform: rotate(180deg);
-            
-        }
+    <!-- CSS enquanto o amigo do CSS não chega -->
 
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #4f4f4f;
+            }
+            header {
+                background-color: #333;
+                color: #fff;
+                padding: 10px;
+                text-align: center;
+            }
+            nav {
+                background-color: #666;
+                color: #fff;
+                padding: 10px;
+                text-align: center;
+            }
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+            nav ul li {
+                display: inline;
+                margin-right: 10px;
+            }
+            nav ul li a {
+                color: #fff;
+                text-decoration: none;
+            }
+            section {
+                margin: 30px;
+                margin-top: 0.1px;
+                margin-bottom: 0.1px;
+                padding: 1px;
+                color: #fff;
+            }
+            footer {
+                overflow-x: hidden;
+                background-color: #333;
+                color: #fff;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                text-align: center;
+                margin-bottom: 0;
+                width: 100%;
+            }
+            .flex{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem;
+                border-radius: 5px;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+                cursor: pointer;
+            }
+            .seta-virada {
+                transform: rotate(180deg);
+                transition: transform 0.3s ease;
+            }
     </style>
 </head>
 <body>
+
+    <!-- Título -->
+
     <header>
         <h1>WikiMac</h1>
     </header>
+
+    <!-- Tópicos -->
+
     <nav>
         <ul>
             <li><a href="#título principal">Página Principal</a></li>
@@ -84,10 +90,16 @@
         </ul>
     </nav>
     <main>
+
+        <!-- texto principal da tela -->
+
     <section id="título principal">
-        <h2 onclick="toggleSection('principal')">Página Principal</h2>
-        <p id="principal">Bem-vindo à WikiMac, a enciclopédia online sobre o assunto do CESMAC de ADS.</p>
+        <h2>Página Principal</h2>
+        <p>Bem-vindo à WikiMac, a enciclopédia online sobre o assunto do CESMAC de ADS.</p>
     </section>
+
+        <!-- Sistemas Operacionais -->
+
     <section id="titulo-sistemas">
         <div class="flex" onclick="toggleSection('sistemas')">
             <h2>Sistemas Operacionais</h2>
@@ -96,12 +108,11 @@
                 <path d="M12 15.5l6.5-6.5-1.41-1.41L12 12.67l-5.09-5.08L5.5 9.5 12 15.5z"/>
               </svg>
         </div>
-        <p id="sistemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur mauris ut nibh mollis, id imperdiet elit tempor. Nulla vel orci lectus. Fusce sed suscipit ex. Praesent eget vestibulum nisl. Nulla imperdiet urna ac interdum faucibus. Donec fringilla placerat ligula, vel suscipit orci dapibus id. Ut ornare molestie elit, at gravida sapien egestas id. Phasellus commodo sem in enim dapibus, a interdum justo pellentesque. Ut eget posuere nisi. Donec sed est placerat, hendrerit erat eu, malesuada lectus. Sed tempor metus et efficitur aliquet. Morbi non consectetur mauris. Phasellus nec metus urna.<br>
-            Phasellus sodales porttitor urna vel efficitur. Praesent tincidunt, odio vel sagittis hendrerit, tellus diam finibus leo, aliquet venenatis enim sem hendrerit mauris. Fusce eget imperdiet elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris tristique lacinia tristique. Nunc in maximus elit. Pellentesque blandit volutpat purus, nec sollicitudin lorem vestibulum quis. Nullam sed varius nunc. Aenean iaculis odio nec ultrices vehicula. In luctus augue a felis ultrices dictum. Duis feugiat augue quis neque ultricies, sit amet pellentesque arcu aliquet. Sed mattis orci sed ex tempus sodales. Proin sit amet odio eros.<br>
-            Duis in odio tempor odio porta posuere nec at felis. Vestibulum ullamcorper laoreet maximus. Maecenas dictum quis felis a facilisis. Nullam in aliquam tortor. Pellentesque lacinia ut turpis non porta. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam sodales eleifend pretium. Suspendisse laoreet orci ut libero eleifend, et egestas diam aliquet. Cras rhoncus ipsum ut sem tincidunt, id venenatis sem malesuada. Quisque varius sodales nibh malesuada accumsan. Nullam dapibus justo sit amet dui dictum commodo. Vivamus semper rhoncus libero, eu ultrices risus ullamcorper eu.<br>
-            Vivamus scelerisque rhoncus magna, sit amet pretium enim facilisis venenatis. Curabitur eleifend, urna ut ullamcorper elementum, nisl velit placerat nisl, eu viverra ligula erat ut lectus. Cras a feugiat felis. Nullam sollicitudin, magna accumsan iaculis venenatis, nisi tellus vulputate ligula, et pretium leo enim eu ex. Aenean posuere odio non odio posuere, eget consectetur massa malesuada. Fusce lacus metus, malesuada et libero vel, sagittis laoreet risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas convallis sapien ut tempor tempus.<br>
-            Vivamus id dui in augue venenatis semper. Phasellus vulputate condimentum mauris vitae iaculis. Nam id hendrerit lectus. Duis in euismod nisl, sit amet porta risus. Duis vitae felis mauris. Quisque congue leo nec orci semper fringilla. Ut rutrum non felis eu tempor. Aenean eget ullamcorper elit. Donec id feugiat purus. Aliquam in lectus efficitur, posuere est sed, vulputate dui. Quisque egestas magna vel elit pretium venenatis.</p>
+        <p id="sistemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </section>
+
+        <!-- Arquitetura e Organização de Computadores -->
+
     <section id="título arquitetura">
         <div class="flex" onclick="toggleSection('arquitetura')">
             <h2 >Arquitetura e Organização de Computadores</h2>
@@ -116,6 +127,9 @@
             Vivamus scelerisque rhoncus magna, sit amet pretium enim facilisis venenatis. Curabitur eleifend, urna ut ullamcorper elementum, nisl velit placerat nisl, eu viverra ligula erat ut lectus. Cras a feugiat felis. Nullam sollicitudin, magna accumsan iaculis venenatis, nisi tellus vulputate ligula, et pretium leo enim eu ex. Aenean posuere odio non odio posuere, eget consectetur massa malesuada. Fusce lacus metus, malesuada et libero vel, sagittis laoreet risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas convallis sapien ut tempor tempus.<br>
             Vivamus id dui in augue venenatis semper. Phasellus vulputate condimentum mauris vitae iaculis. Nam id hendrerit lectus. Duis in euismod nisl, sit amet porta risus. Duis vitae felis mauris. Quisque congue leo nec orci semper fringilla. Ut rutrum non felis eu tempor. Aenean eget ullamcorper elit. Donec id feugiat purus. Aliquam in lectus efficitur, posuere est sed, vulputate dui. Quisque egestas magna vel elit pretium venenatis.</p>
     </section>
+
+        <!-- Sobre -->
+
     <section id="título sobre">
         <div class="flex" onclick="toggleSection('sobre')">
             <h2>Sobre</h2>
@@ -130,6 +144,9 @@
         &copy; 2024 WikiMac. Nenhum direito reservado.
     </footer>
 </main>
+
+        <!-- JS enquanto não colocamos pra um arquivo diferente pra organizar direito -->
+
     <script>
         function toggleSection(sectionId) {
             var section = document.getElementById(sectionId);
