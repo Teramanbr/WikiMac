@@ -50,10 +50,25 @@
             padding-top: 10px;
             padding-bottom: 10px;
             text-align: center;
-            position: bottom;
-            bottom: 0;
+            margin-bottom: 0;
             width: 100%;
         }
+        .flex{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+      
+        .seta-virada {
+            transform: rotate(180deg);
+            
+        }
+
     </style>
 </head>
 <body>
@@ -68,12 +83,19 @@
             <li><a href="#título sobre">Sobre</a></li>
         </ul>
     </nav>
+    <main>
     <section id="título principal">
         <h2 onclick="toggleSection('principal')">Página Principal</h2>
         <p id="principal">Bem-vindo à WikiMac, a enciclopédia online sobre o assunto do CESMAC de ADS.</p>
     </section>
-    <section id="título sistemas">
-        <h2 onclick="toggleSection('sistemas')">Sistemas Operacionais</h2>
+    <section id="titulo-sistemas">
+        <div class="flex" onclick="toggleSection('sistemas')">
+            <h2>Sistemas Operacionais</h2>
+            <svg id="seta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+                <path fill="none" d="M0 0h24v24H0z"/>
+                <path d="M12 15.5l6.5-6.5-1.41-1.41L12 12.67l-5.09-5.08L5.5 9.5 12 15.5z"/>
+              </svg>
+        </div>
         <p id="sistemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur mauris ut nibh mollis, id imperdiet elit tempor. Nulla vel orci lectus. Fusce sed suscipit ex. Praesent eget vestibulum nisl. Nulla imperdiet urna ac interdum faucibus. Donec fringilla placerat ligula, vel suscipit orci dapibus id. Ut ornare molestie elit, at gravida sapien egestas id. Phasellus commodo sem in enim dapibus, a interdum justo pellentesque. Ut eget posuere nisi. Donec sed est placerat, hendrerit erat eu, malesuada lectus. Sed tempor metus et efficitur aliquet. Morbi non consectetur mauris. Phasellus nec metus urna.<br>
             Phasellus sodales porttitor urna vel efficitur. Praesent tincidunt, odio vel sagittis hendrerit, tellus diam finibus leo, aliquet venenatis enim sem hendrerit mauris. Fusce eget imperdiet elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris tristique lacinia tristique. Nunc in maximus elit. Pellentesque blandit volutpat purus, nec sollicitudin lorem vestibulum quis. Nullam sed varius nunc. Aenean iaculis odio nec ultrices vehicula. In luctus augue a felis ultrices dictum. Duis feugiat augue quis neque ultricies, sit amet pellentesque arcu aliquet. Sed mattis orci sed ex tempus sodales. Proin sit amet odio eros.<br>
             Duis in odio tempor odio porta posuere nec at felis. Vestibulum ullamcorper laoreet maximus. Maecenas dictum quis felis a facilisis. Nullam in aliquam tortor. Pellentesque lacinia ut turpis non porta. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam sodales eleifend pretium. Suspendisse laoreet orci ut libero eleifend, et egestas diam aliquet. Cras rhoncus ipsum ut sem tincidunt, id venenatis sem malesuada. Quisque varius sodales nibh malesuada accumsan. Nullam dapibus justo sit amet dui dictum commodo. Vivamus semper rhoncus libero, eu ultrices risus ullamcorper eu.<br>
@@ -81,7 +103,13 @@
             Vivamus id dui in augue venenatis semper. Phasellus vulputate condimentum mauris vitae iaculis. Nam id hendrerit lectus. Duis in euismod nisl, sit amet porta risus. Duis vitae felis mauris. Quisque congue leo nec orci semper fringilla. Ut rutrum non felis eu tempor. Aenean eget ullamcorper elit. Donec id feugiat purus. Aliquam in lectus efficitur, posuere est sed, vulputate dui. Quisque egestas magna vel elit pretium venenatis.</p>
     </section>
     <section id="título arquitetura">
-        <h2 onclick="toggleSection('arquitetura')">Arquitetura e Organização de Computadores</h2>
+        <div class="flex" onclick="toggleSection('arquitetura')">
+            <h2 >Arquitetura e Organização de Computadores</h2>
+            <svg id="seta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+                <path fill="none" d="M0 0h24v24H0z"/>
+                <path d="M12 15.5l6.5-6.5-1.41-1.41L12 12.67l-5.09-5.08L5.5 9.5 12 15.5z"/>
+              </svg>
+        </div>
         <p id="arquitetura">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur mauris ut nibh mollis, id imperdiet elit tempor. Nulla vel orci lectus. Fusce sed suscipit ex. Praesent eget vestibulum nisl. Nulla imperdiet urna ac interdum faucibus. Donec fringilla placerat ligula, vel suscipit orci dapibus id. Ut ornare molestie elit, at gravida sapien egestas id. Phasellus commodo sem in enim dapibus, a interdum justo pellentesque. Ut eget posuere nisi. Donec sed est placerat, hendrerit erat eu, malesuada lectus. Sed tempor metus et efficitur aliquet. Morbi non consectetur mauris. Phasellus nec metus urna.<br>
             Phasellus sodales porttitor urna vel efficitur. Praesent tincidunt, odio vel sagittis hendrerit, tellus diam finibus leo, aliquet venenatis enim sem hendrerit mauris. Fusce eget imperdiet elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris tristique lacinia tristique. Nunc in maximus elit. Pellentesque blandit volutpat purus, nec sollicitudin lorem vestibulum quis. Nullam sed varius nunc. Aenean iaculis odio nec ultrices vehicula. In luctus augue a felis ultrices dictum. Duis feugiat augue quis neque ultricies, sit amet pellentesque arcu aliquet. Sed mattis orci sed ex tempus sodales. Proin sit amet odio eros.<br>
             Duis in odio tempor odio porta posuere nec at felis. Vestibulum ullamcorper laoreet maximus. Maecenas dictum quis felis a facilisis. Nullam in aliquam tortor. Pellentesque lacinia ut turpis non porta. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam sodales eleifend pretium. Suspendisse laoreet orci ut libero eleifend, et egestas diam aliquet. Cras rhoncus ipsum ut sem tincidunt, id venenatis sem malesuada. Quisque varius sodales nibh malesuada accumsan. Nullam dapibus justo sit amet dui dictum commodo. Vivamus semper rhoncus libero, eu ultrices risus ullamcorper eu.<br>
@@ -89,19 +117,29 @@
             Vivamus id dui in augue venenatis semper. Phasellus vulputate condimentum mauris vitae iaculis. Nam id hendrerit lectus. Duis in euismod nisl, sit amet porta risus. Duis vitae felis mauris. Quisque congue leo nec orci semper fringilla. Ut rutrum non felis eu tempor. Aenean eget ullamcorper elit. Donec id feugiat purus. Aliquam in lectus efficitur, posuere est sed, vulputate dui. Quisque egestas magna vel elit pretium venenatis.</p>
     </section>
     <section id="título sobre">
-        <h2 onclick="toggleSection('sobre')">Sobre</h2>
-        <p id="sobre">Este trabalho foi feito por Vinícius Stanley, Lucas Melo, Hygo, Layla Paes e Paulo</p>
+        <div class="flex" onclick="toggleSection('sobre')">
+            <h2>Sobre</h2>
+            <svg id="seta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+                <path fill="none" d="M0 0h24v24H0z"/>
+                <path d="M12 15.5l6.5-6.5-1.41-1.41L12 12.67l-5.09-5.08L5.5 9.5 12 15.5z"/>
+              </svg>
+        </div>
+        <p id="sobre">Este trabalho foi feito por Vinícius Stanley, Lucas Melo, Hygo, Layla Pais e Paulo</p>
     </section>
     <footer>
         &copy; 2024 WikiMac. Nenhum direito reservado.
     </footer>
+</main>
     <script>
         function toggleSection(sectionId) {
             var section = document.getElementById(sectionId);
+            var seta = document.getElementById('seta');
             if (section.style.display === "none") {
                 section.style.display = "block";
+                seta.classList.add('seta-virada');
             } else {
                 section.style.display = "none";
+                seta.classList.remove('seta-virada');
             }
         }
     </script>
