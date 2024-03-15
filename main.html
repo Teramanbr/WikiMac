@@ -84,25 +84,14 @@
     <nav>
         <ul>
             <li><a href="#título principal">Página Principal</a></li>
-            <li><a href="#título-sistemas">Sistemas Operacionais</a></li>
-            <li><a href="#título-arquitetura">Arquitetura e Organização de Computadores</a></li>
-            <li><a href="#título-sobre">Sobre</a></li>
-
-            <!-- Formulario de seleção de tópicos -->
-            <li>
-                <form action="#" style="display: inline;">
-                    <div style="display: inline;">
-                        <label for="pesquisar">tópico:</label>
-                        <select name="pesquisa" id="pesquisar" style="width: 100px;">
-                            <option value="">Exibir tudo</option>
-                            <option value="SO">Sistemas Operacionais</option>
-                            <option value="AOC">Arquitetura e Organização de Computadores</option>
-                            <option value="sobre">Sobre</option>
-                        </select>
-                    </div>
-                </form>
-            </li>
+            <li><a href="#título sistemas">Sistemas Operacionais</a></li>
+            <li><a href="#título arquitetura">Arquitetura e Organização de Computadores</a></li>
+            <li><a href="#título sobre">Sobre</a></li>
         </ul>
+    <!-- Barra de Pesquisa -->
+        <div id="search-container">
+            <input type="text" id="search-input" oninput="search()" placeholder="Pesquisar...">
+        </div>
     </nav>
     <main>
 
@@ -128,7 +117,7 @@
 
         <!-- Arquitetura e Organização de Computadores -->
 
-    <section id="título-arquitetura">
+    <section id="título arquitetura">
         <div class="flex" onclick="toggleSection('arquitetura')">
             <h2 >Arquitetura e Organização de Computadores</h2>
             <svg id="seta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
@@ -145,7 +134,7 @@
 
         <!-- Sobre -->
 
-    <section id="título-sobre">
+    <section id="título sobre">
         <div class="flex" onclick="toggleSection('sobre')">
             <h2>Sobre</h2>
             <svg id="seta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
@@ -162,6 +151,27 @@
 
         <!-- JS enquanto não colocamos pra um arquivo diferente pra organizar direito -->
 
+        <!-- scriptão da pesquisa braba -->
+        <script>
+            function search() {
+                var input, filter, sections, section, i, txtValue;
+                input = document.getElementById('search-input');
+                filter = input.value.toUpperCase();
+                sections = document.querySelectorAll('section');
+        
+                for (i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    txtValue = section.textContent || section.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        section.style.display = "";
+                    } else {
+                        section.style.display = "none";
+                    }
+                }
+            }
+        </script>        
+
+
     <script>
         function toggleSection(sectionId) {
             var section = document.getElementById(sectionId);
@@ -174,56 +184,6 @@
                 seta.classList.remove('seta-virada');
             }
         }
-    </script>
-
-    <!-- Script de seleção de tópicos -->
-
-    <script>
-        //Seleciona o formulario
-        var pesquisar = document.getElementById('pesquisar');
-
-        //Chama a função quando o valor do formulario for alterado
-        pesquisar.addEventListener('change', function() {
-            //Recupera o valor atual do formulario
-            var topico = document.getElementById('pesquisar').value;
-
-            if(topico == "SO"){
-
-                //Torna o tópico selecionado exibivel
-                document.getElementById('titulo-sistemas').style = "display: block;";
-
-                //Torna os demais tópicos invisíveis
-                var topicos = document.querySelectorAll('#título-arquitetura, #título-sobre');
-
-                topicos.forEach(function(topicoNaoSelecioando) {
-                    topicoNaoSelecioando.style = "display: none";
-                });
-            }else if(topico == "AOC"){
-
-                document.getElementById('título-arquitetura').style = "display: block;";
-
-                var topicos = document.querySelectorAll('#titulo-sistemas, #título-sobre');
-
-                topicos.forEach(function(topicoNaoSelecioando) {
-                    topicoNaoSelecioando.style = "display: none";
-                });
-            }else if(topico == "sobre"){
-
-                document.getElementById('título-sobre').style = "display: block;";
-
-                var topicos = document.querySelectorAll('#titulo-sistemas, #título-arquitetura');
-
-                topicos.forEach(function(topicoNaoSelecioando) {
-                    topicoNaoSelecioando.style = "display: none";
-                });
-            }else {
-                var topicos = document.querySelectorAll('#titulo-sistemas, #título-arquitetura, #título-sobre');
-
-                topicos.forEach(function(topicoNaoSelecioando) {
-                    topicoNaoSelecioando.style = "display: block";
-                });
-            }
-        });
     </script>
 </body>
 </html>
