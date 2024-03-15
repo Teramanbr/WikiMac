@@ -12,19 +12,26 @@
                 font-family: Arial, sans-serif;
                 margin: 0;
                 padding: 0;
-                background-color: #4f4f4f;
+                background-color: #1D2B32;
             }
             header {
-                background-color: #333;
+                background-color: #11191E;
                 color: #fff;
                 padding: 10px;
+                text-align: center;
+                border-radius: 0px 0px 40px 40px;
+            }
+            search {
                 text-align: center;
             }
             nav {
-                background-color: #666;
+                background-color: #3C5B6B;
                 color: #fff;
-                padding: 10px;
+                padding: 15px;
+                margin-left: 350px;
+                margin-right: 350px;
                 text-align: center;
+                border-radius: 13px 13px 13px 13px;
             }
             nav ul {
                 list-style-type: none;
@@ -47,14 +54,13 @@
                 color: #fff;
             }
             footer {
-                overflow-x: hidden;
-                background-color: #333;
+                background-color: #11191E;
                 color: #fff;
                 padding-top: 10px;
                 padding-bottom: 10px;
                 text-align: center;
-                margin-bottom: 0;
                 width: 100%;
+                border-radius: 15px 15px 0px 0px;
             }
             .flex{
                 display: flex;
@@ -64,11 +70,17 @@
                 border-radius: 5px;
                 box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
                 cursor: pointer;
+                background-color: #11191E;
+                border-radius: 15px 15px 15px 15px;
             }
             .seta-virada {
                 transform: rotate(180deg);
                 transition: transform 0.3s ease;
             }
+            .seta-virada.down {
+            transform: rotate(180deg);
+            }
+            
     </style>
 </head>
 <body>
@@ -88,12 +100,15 @@
             <li><a href="#título arquitetura">Arquitetura e Organização de Computadores</a></li>
             <li><a href="#título sobre">Sobre</a></li>
         </ul>
-    <!-- Barra de Pesquisa -->
-        <div id="search-container">
-            <input type="text" id="search-input" oninput="search()" placeholder="Pesquisar...">
-        </div>
     </nav>
     <main>
+        <search>
+        <!-- Barra de Pesquisa -->
+            <div id="search-container">
+                <input type="text" id="search-input" oninput="search()" placeholder="Pesquisar...">
+            </div>
+        </search>
+
 
         <!-- texto principal da tela -->
 
@@ -104,20 +119,20 @@
 
         <!-- Sistemas Operacionais -->
 
-    <section id="titulo-sistemas">
-        <div class="flex" onclick="toggleSection('sistemas')">
-            <h2>Sistemas Operacionais</h2>
-            <svg id="seta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
-                <path fill="none" d="M0 0h24v24H0z"/>
-                <path d="M12 15.5l6.5-6.5-1.41-1.41L12 12.67l-5.09-5.08L5.5 9.5 12 15.5z"/>
-              </svg>
-        </div>
-        <p id="sistemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </section>
+        <section id="titulo-sistemas">
+            <div class="flex" onclick="toggleSection('sistemas')">
+                <h2>Sistemas Operacionais</h2>
+                <svg id="seta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+                    <path fill="none" d="M0 0h24v24H0z"/>
+                    <path d="M12 15.5l6.5-6.5-1.41-1.41L12 12.67l-5.09-5.08L5.5 9.5 12 15.5z"/>
+                  </svg>
+            </div>
+            <p id="sistemas">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section>
 
-        <!-- Arquitetura e Organização de Computadores -->
 
-    <section id="título arquitetura">
+                                            <!-- Arquitetura e Organização de Computadores -->
+        <section id="título arquitetura">
         <div class="flex" onclick="toggleSection('arquitetura')">
             <h2 >Arquitetura e Organização de Computadores</h2>
             <svg id="seta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
@@ -171,19 +186,19 @@
             }
         </script>        
 
-
-    <script>
-        function toggleSection(sectionId) {
-            var section = document.getElementById(sectionId);
-            var seta = document.getElementById('seta');
-            if (section.style.display === "none") {
-                section.style.display = "block";
-                seta.classList.add('seta-virada');
-            } else {
-                section.style.display = "none";
-                seta.classList.remove('seta-virada');
-            }
+<!-- seta virada -->
+<script>
+    function toggleSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        var seta = document.getElementById('seta');
+        if (section.style.display === "none") {
+            section.style.display = "block";
+            seta.classList.add('seta-virada');
+        } else {
+            section.style.display = "none";
+            seta.classList.remove('seta-virada');
         }
-    </script>
+    }
+</script>
 </body>
 </html>
