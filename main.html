@@ -21,8 +21,24 @@
                 text-align: center;
                 border-radius: 0px 0px 40px 40px;
             }
-            search {
+            search #search-container {
+                display: flex;
+                align-items: end;
+                justify-content: end;
+                margin-left: 0.49em;
+                margin-right: 5.8rem;
+                margin-top: -47px;
                 text-align: center;
+               
+              
+            }
+            #search-container input {
+                background-color: rgba(232, 232, 232, 0.93);
+                padding: 15px;
+                padding-left:60px;
+                border: none;
+                border-radius: 13px;
+
             }
             nav {
                 background-color: #3C5B6B;
@@ -53,7 +69,14 @@
                 padding: 1px;
                 color: #fff;
             }
+            .search-highlight {
+             text-decoration: underline yellow;
+                 }
+
             footer {
+              
+                position: fixed;
+                bottom: 0;
                 background-color: #11191E;
                 color: #fff;
                 padding-top: 10px;
@@ -71,7 +94,7 @@
                 box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
                 cursor: pointer;
                 background-color: #11191E;
-                border-radius: 15px 15px 15px 15px;
+                border-radius: 15px ;
             }
             .seta-virada {
                 transform: rotate(180deg);
