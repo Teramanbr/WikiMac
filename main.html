@@ -103,7 +103,31 @@
             .seta-virada.down {
             transform: rotate(180deg);
             }
+
+            .blocos-conteudo{
+                padding: 10px; 
+                background-color: #3C5B6B; 
+                display: none; 
+                width: 90%; 
+                margin-left: auto; 
+                margin-right: auto;
+                margin-bottom: 10px;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
             
+            .blocos-conteudo > div {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            .blocos-conteudo > p {
+                display: none;
+            }
+
+            #sobre {
+                margin-bottom: 50px;
+            }
     </style>
 </head>
 <body>
@@ -143,75 +167,208 @@
         <!-- Sistemas Operacionais -->
 
         <section id="titulo-sistemas">
-            <div class="flex" onclick="toggleSection('sistemas')">
+            <div class="flex" onclick="toggleSection('sistemas','seta-sistemas')">
                 <h2>Sistemas Operacionais</h2>
-                <svg id="seta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+                <svg id="seta-sistemas" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
                     <path fill="none" d="M0 0h24v24H0z"/>
                     <path d="M12 15.5l6.5-6.5-1.41-1.41L12 12.67l-5.09-5.08L5.5 9.5 12 15.5z"/>
                 </svg>
             </div>
-            <p id="sistemas">Um sistema operacional (SO) é um software fundamental que atua como intermediário entre
-                o hardware de um computador e os programas de aplicação do usuário. Ele é responsável
-                por gerenciar todos os recursos do sistema, incluindo processador, memória, dispositivos de
-                entrada/saída e armazenamento. Em essência, o sistema operacional facilita a
-                comunicação entre o usuário e o hardware, fornecendo uma interface para que os
-                programas possam ser executados de forma eficiente e controlando o acesso aos recursos
-                do sistema.
-            </p>
+
+            <div id="sistemas" class="blocos-conteudo">
+                <div id="sistemas-topico-1" class="flex" onclick="toggleSection('sistemas-topico-1-texto','seta-sistemas-topico-1')">
+                    <h2>tópico 1</h2>
+                    <svg id="seta-sistemas-topico-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+                        <path fill="none" d="M0 0h24v24H0z"/>
+                        <path d="M12 15.5l6.5-6.5-1.41-1.41L12 12.67l-5.09-5.08L5.5 9.5 12 15.5z"/>
+                    </svg>
+                </div>
+                <p id="sistemas-topico-1-texto">Um sistema operacional (SO) é um software fundamental que atua como intermediário entre
+                    o hardware de um computador e os programas de aplicação do usuário. Ele é responsável
+                    por gerenciar todos os recursos do sistema, incluindo processador, memória, dispositivos de
+                    entrada/saída e armazenamento. Em essência, o sistema operacional facilita a
+                    comunicação entre o usuário e o hardware, fornecendo uma interface para que os
+                    programas possam ser executados de forma eficiente e controlando o acesso aos recursos
+                    do sistema.
+                </p>
+
+                <div id="sistemas-topico-2" class="flex" onclick="toggleSection('sistemas-topico-2-texto','seta-sistemas-topico-2')">
+                    <h2>tópico 2</h2>
+                    <svg id="seta-sistemas-topico-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+                        <path fill="none" d="M0 0h24v24H0z"/>
+                        <path d="M12 15.5l6.5-6.5-1.41-1.41L12 12.67l-5.09-5.08L5.5 9.5 12 15.5z"/>
+                    </svg>
+                </div>
+                <p id="sistemas-topico-2-texto">Um sistema operacional (SO) é um software fundamental que atua como intermediário entre
+                    o hardware de um computador e os programas de aplicação do usuário. Ele é responsável
+                    por gerenciar todos os recursos do sistema, incluindo processador, memória, dispositivos de
+                    entrada/saída e armazenamento. Em essência, o sistema operacional facilita a
+                    comunicação entre o usuário e o hardware, fornecendo uma interface para que os
+                    programas possam ser executados de forma eficiente e controlando o acesso aos recursos
+                    do sistema.
+                </p>
+
+                <div id="sistemas-topico-3" class="flex" onclick="toggleSection('sistemas-topico-3-texto','seta-sistemas-topico-3')">
+                    <h2>tópico 2</h2>
+                    <svg id="seta-sistemas-topico-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+                        <path fill="none" d="M0 0h24v24H0z"/>
+                        <path d="M12 15.5l6.5-6.5-1.41-1.41L12 12.67l-5.09-5.08L5.5 9.5 12 15.5z"/>
+                    </svg>
+                </div>
+                <p id="sistemas-topico-3-texto">Um sistema operacional (SO) é um software fundamental que atua como intermediário entre
+                    o hardware de um computador e os programas de aplicação do usuário. Ele é responsável
+                    por gerenciar todos os recursos do sistema, incluindo processador, memória, dispositivos de
+                    entrada/saída e armazenamento. Em essência, o sistema operacional facilita a
+                    comunicação entre o usuário e o hardware, fornecendo uma interface para que os
+                    programas possam ser executados de forma eficiente e controlando o acesso aos recursos
+                    do sistema.
+                </p>
+                
+            </div>
+            
         </section>
 
 
                                             <!-- Arquitetura e Organização de Computadores -->
         <section id="título arquitetura">
-        <div class="flex" onclick="toggleSection('arquitetura')">
-            <h2 >Arquitetura e Organização de Computadores</h2>
-            <svg id="seta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
-                <path fill="none" d="M0 0h24v24H0z"/>
-                <path d="M12 15.5l6.5-6.5-1.41-1.41L12 12.67l-5.09-5.08L5.5 9.5 12 15.5z"/>
-              </svg>
-        </div>
-        <p id="arquitetura">
-            A arquitetura e organização de computadores é o campo que estuda os princípios
-            fundamentais que regem o funcionamento dos computadores, desde o nível mais básico
-            dos circuitos eletrônicos até a organização de sistemas complexos. No cerne desse campo
-            está a compreensão do que é um computador e como ele opera.<br>
-            Um computador é um dispositivo eletrônico capaz de processar dados de acordo com
-            instruções pré-definidas. Em sua forma mais básica, um computador é composto por
-            hardware e software. <br>
-            O hardware refere-se aos componentes físicos do computador, como processador (CPU),
-            memória RAM, disco rígido (ou SSD), placas de circuito (incluindo a placa-mãe), periféricos
-            de entrada e saída (teclado, mouse, monitor, etc.) e outros dispositivos.
-            Por outro lado, o software é composto pelos programas e dados que instruem o computador
-            sobre o que fazer. Isso inclui o sistema operacional, que gerencia recursos de hardware e
-            fornece uma interface para o usuário, bem como aplicativos de software, como
-            processadores de texto, navegadores da web, jogos, entre outros.<br>
-            O funcionamento de um computador baseia-se em processos de entrada, processamento,
-            saída e armazenamento de dados. Os dados de entrada são fornecidos ao computador por
-            meio de dispositivos de entrada, como teclado e mouse. O processador (CPU) executa
-            instruções sobre esses dados de acordo com o software em execução, realizando
-            operações de processamento. Os resultados são então exibidos ou armazenados, por meio
-            de dispositivos de saída, como monitores ou impressoras, ou armazenados em memória
-            permanente, como um disco rígido.<br>
-            Essa estrutura básica de entrada, processamento e saída é o princípio fundamental que
-            define um computador e é aplicável a uma ampla gama de dispositivos, desde
-            computadores pessoais e servidores até smartphones, tablets e sistemas embarcados em
-            dispositivos do dia a dia. Em suma, um computador é uma máquina capaz de processar
-            dados para realizar tarefas específicas, sendo o resultado de uma complexa interação entre
-            hardware e software.
-        </p>
-    </section>
+            <div class="flex" onclick="toggleSection('arquitetura','seta-arquitetura')">
+                <h2 >Arquitetura e Organização de Computadores</h2>
+                <svg id="seta-arquitetura" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+                    <path fill="none" d="M0 0h24v24H0z"/>
+                    <path d="M12 15.5l6.5-6.5-1.41-1.41L12 12.67l-5.09-5.08L5.5 9.5 12 15.5z"/>
+                </svg>
+            </div>
+
+            <div id="arquitetura" class="blocos-conteudo">
+                <div id="arquitetura-topico-1" class="flex" onclick="toggleSection('arquitetura-topico-1-texto','seta-arquitetura-topico-1')">
+                    <h2>tópico 1</h2>
+                    <svg id="seta-arquitetura-topico-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+                        <path fill="none" d="M0 0h24v24H0z"/>
+                        <path d="M12 15.5l6.5-6.5-1.41-1.41L12 12.67l-5.09-5.08L5.5 9.5 12 15.5z"/>
+                    </svg>
+                </div>
+                <p id="arquitetura-topico-1-texto">
+                    A arquitetura e organização de computadores é o campo que estuda os princípios
+                    fundamentais que regem o funcionamento dos computadores, desde o nível mais básico
+                    dos circuitos eletrônicos até a organização de sistemas complexos. No cerne desse campo
+                    está a compreensão do que é um computador e como ele opera.<br>
+                    Um computador é um dispositivo eletrônico capaz de processar dados de acordo com
+                    instruções pré-definidas. Em sua forma mais básica, um computador é composto por
+                    hardware e software. <br>
+                    O hardware refere-se aos componentes físicos do computador, como processador (CPU),
+                    memória RAM, disco rígido (ou SSD), placas de circuito (incluindo a placa-mãe), periféricos
+                    de entrada e saída (teclado, mouse, monitor, etc.) e outros dispositivos.
+                    Por outro lado, o software é composto pelos programas e dados que instruem o computador
+                    sobre o que fazer. Isso inclui o sistema operacional, que gerencia recursos de hardware e
+                    fornece uma interface para o usuário, bem como aplicativos de software, como
+                    processadores de texto, navegadores da web, jogos, entre outros.<br>
+                    O funcionamento de um computador baseia-se em processos de entrada, processamento,
+                    saída e armazenamento de dados. Os dados de entrada são fornecidos ao computador por
+                    meio de dispositivos de entrada, como teclado e mouse. O processador (CPU) executa
+                    instruções sobre esses dados de acordo com o software em execução, realizando
+                    operações de processamento. Os resultados são então exibidos ou armazenados, por meio
+                    de dispositivos de saída, como monitores ou impressoras, ou armazenados em memória
+                    permanente, como um disco rígido.<br>
+                    Essa estrutura básica de entrada, processamento e saída é o princípio fundamental que
+                    define um computador e é aplicável a uma ampla gama de dispositivos, desde
+                    computadores pessoais e servidores até smartphones, tablets e sistemas embarcados em
+                    dispositivos do dia a dia. Em suma, um computador é uma máquina capaz de processar
+                    dados para realizar tarefas específicas, sendo o resultado de uma complexa interação entre
+                    hardware e software.
+                </p>
+
+                <div id="arquitetura-topico-2" class="flex" onclick="toggleSection('arquitetura-topico-2-texto','seta-arquitetura-topico-2')">
+                    <h2>tópico 1</h2>
+                    <svg id="seta-arquitetura-topico-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+                        <path fill="none" d="M0 0h24v24H0z"/>
+                        <path d="M12 15.5l6.5-6.5-1.41-1.41L12 12.67l-5.09-5.08L5.5 9.5 12 15.5z"/>
+                    </svg>
+                </div>
+                <p id="arquitetura-topico-2-texto">
+                    A arquitetura e organização de computadores é o campo que estuda os princípios
+                    fundamentais que regem o funcionamento dos computadores, desde o nível mais básico
+                    dos circuitos eletrônicos até a organização de sistemas complexos. No cerne desse campo
+                    está a compreensão do que é um computador e como ele opera.<br>
+                    Um computador é um dispositivo eletrônico capaz de processar dados de acordo com
+                    instruções pré-definidas. Em sua forma mais básica, um computador é composto por
+                    hardware e software. <br>
+                    O hardware refere-se aos componentes físicos do computador, como processador (CPU),
+                    memória RAM, disco rígido (ou SSD), placas de circuito (incluindo a placa-mãe), periféricos
+                    de entrada e saída (teclado, mouse, monitor, etc.) e outros dispositivos.
+                    Por outro lado, o software é composto pelos programas e dados que instruem o computador
+                    sobre o que fazer. Isso inclui o sistema operacional, que gerencia recursos de hardware e
+                    fornece uma interface para o usuário, bem como aplicativos de software, como
+                    processadores de texto, navegadores da web, jogos, entre outros.<br>
+                    O funcionamento de um computador baseia-se em processos de entrada, processamento,
+                    saída e armazenamento de dados. Os dados de entrada são fornecidos ao computador por
+                    meio de dispositivos de entrada, como teclado e mouse. O processador (CPU) executa
+                    instruções sobre esses dados de acordo com o software em execução, realizando
+                    operações de processamento. Os resultados são então exibidos ou armazenados, por meio
+                    de dispositivos de saída, como monitores ou impressoras, ou armazenados em memória
+                    permanente, como um disco rígido.<br>
+                    Essa estrutura básica de entrada, processamento e saída é o princípio fundamental que
+                    define um computador e é aplicável a uma ampla gama de dispositivos, desde
+                    computadores pessoais e servidores até smartphones, tablets e sistemas embarcados em
+                    dispositivos do dia a dia. Em suma, um computador é uma máquina capaz de processar
+                    dados para realizar tarefas específicas, sendo o resultado de uma complexa interação entre
+                    hardware e software.
+                </p>
+
+                <div id="arquitetura-topico-3" class="flex" onclick="toggleSection('arquitetura-topico-3-texto','seta-arquitetura-topico-3')">
+                    <h2>tópico 1</h2>
+                    <svg id="seta-arquitetura-topico-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+                        <path fill="none" d="M0 0h24v24H0z"/>
+                        <path d="M12 15.5l6.5-6.5-1.41-1.41L12 12.67l-5.09-5.08L5.5 9.5 12 15.5z"/>
+                    </svg>
+                </div>
+                <p id="arquitetura-topico-3-texto">
+                    A arquitetura e organização de computadores é o campo que estuda os princípios
+                    fundamentais que regem o funcionamento dos computadores, desde o nível mais básico
+                    dos circuitos eletrônicos até a organização de sistemas complexos. No cerne desse campo
+                    está a compreensão do que é um computador e como ele opera.<br>
+                    Um computador é um dispositivo eletrônico capaz de processar dados de acordo com
+                    instruções pré-definidas. Em sua forma mais básica, um computador é composto por
+                    hardware e software. <br>
+                    O hardware refere-se aos componentes físicos do computador, como processador (CPU),
+                    memória RAM, disco rígido (ou SSD), placas de circuito (incluindo a placa-mãe), periféricos
+                    de entrada e saída (teclado, mouse, monitor, etc.) e outros dispositivos.
+                    Por outro lado, o software é composto pelos programas e dados que instruem o computador
+                    sobre o que fazer. Isso inclui o sistema operacional, que gerencia recursos de hardware e
+                    fornece uma interface para o usuário, bem como aplicativos de software, como
+                    processadores de texto, navegadores da web, jogos, entre outros.<br>
+                    O funcionamento de um computador baseia-se em processos de entrada, processamento,
+                    saída e armazenamento de dados. Os dados de entrada são fornecidos ao computador por
+                    meio de dispositivos de entrada, como teclado e mouse. O processador (CPU) executa
+                    instruções sobre esses dados de acordo com o software em execução, realizando
+                    operações de processamento. Os resultados são então exibidos ou armazenados, por meio
+                    de dispositivos de saída, como monitores ou impressoras, ou armazenados em memória
+                    permanente, como um disco rígido.<br>
+                    Essa estrutura básica de entrada, processamento e saída é o princípio fundamental que
+                    define um computador e é aplicável a uma ampla gama de dispositivos, desde
+                    computadores pessoais e servidores até smartphones, tablets e sistemas embarcados em
+                    dispositivos do dia a dia. Em suma, um computador é uma máquina capaz de processar
+                    dados para realizar tarefas específicas, sendo o resultado de uma complexa interação entre
+                    hardware e software.
+                </p>
+                
+            </div>
+
+        </section>
 
         <!-- Sobre -->
 
     <section id="título sobre">
-        <div class="flex" onclick="toggleSection('sobre')">
+        <div class="flex" onclick="toggleSection('sobre','seta-sobre')">
             <h2>Sobre</h2>
-            <svg id="seta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+            <svg id="seta-sobre" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
                 <path fill="none" d="M0 0h24v24H0z"/>
                 <path d="M12 15.5l6.5-6.5-1.41-1.41L12 12.67l-5.09-5.08L5.5 9.5 12 15.5z"/>
               </svg>
         </div>
-        <p id="sobre">Este trabalho foi feito por Vinícius Stanley, Lucas Melo, Hygo, Layla Pais e Paulo</p>
+
+        <div id="sobre" class="blocos-conteudo">
+            <p style="display:block">Este trabalho foi feito por Vinícius Stanley, Lucas Melo, Hygo, Layla Pais e Paulo Diego</p>
+        </div>
     </section>
     <footer>
         &copy; 2024 WikiMac. Nenhum direito reservado.
@@ -242,15 +399,29 @@
 
 <!-- seta virada -->
 <script>
-    function toggleSection(sectionId) {
+    /*
+    function toggleSection(sectionId, setaId) {
         var section = document.getElementById(sectionId);
-        var seta = document.getElementById('seta');
+        var seta = document.getElementById(setaId);
         if (section.style.display === "none") {
             section.style.display = "block";
             seta.classList.add('seta-virada');
         } else {
             section.style.display = "none";
             seta.classList.remove('seta-virada');
+        }
+    }
+    */
+
+    function toggleSection(sectionId, setaId) {
+        var section = document.getElementById(sectionId);
+        var seta = document.getElementById(setaId);
+        if (section.style.display === "block") {
+            section.style.display = "none";
+            seta.classList.remove('seta-virada');
+        } else {
+            section.style.display = "block";
+            seta.classList.add('seta-virada');
         }
     }
 </script>
